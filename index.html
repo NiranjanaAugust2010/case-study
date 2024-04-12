@@ -1,0 +1,154 @@
+<html>
+
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
+    <!-- <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/0.5.1/ml5.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.7.0/dist/ml5.min.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+       #mn{
+        background-color: cadetblue;
+        width:50%;
+       }
+
+       .img1{
+        width: 200px;
+        height: 200px;
+       }
+       #div1{
+        background-color: rgb(162, 189, 212);
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 50px;
+        box-shadow: 5px 5px 18px rgb(165, 165, 232);
+       }
+
+       #div2{
+        text-align: center;
+        color: rgb(142, 142, 243);
+       }
+       #results{
+        box-shadow: 5px 5px 18px rgb(125, 125, 222);
+        letter-spacing: 2px;
+        background-color: rgb(187, 141, 230);
+        border-radius: 20px;
+        margin-top: 30px;
+        padding: 20px;
+        border: 2px solid plum;
+       }
+       .copyrightfooter{
+        
+        color: rgb(106, 172, 230);
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(179, 124, 230);
+        line-height: 3;
+        text-align: center;
+       }
+    </style>
+    
+</head>
+
+ <body> <center><div class="container">
+  <h1>CASE STUDY BETWEEN GOOGLE LENS AND MOBILENET</h1>
+  <br>
+  <p>GOOGLE LENS</p>
+  <img src="google-lens-logo-0F69C74B83-seeklogo.com.png" width="150px">
+  
+  <img src="" alt="">
+  <h1 id="mn">MOBILENET</h1>
+</div></center>
+<div class="container">
+  <ol style="padding: 0px;">
+   <div class="col-xs-12 " id="div1">
+    <li class="col-sm-4 col-xs-12">
+      <b>TEST-IMAGE</b>
+      <img src="PenguinSoftToy.webp" class="img-responsive img1">
+    </li>
+    <h5 class="col-sm-4 col-xs-12">Output on Google lens- Soft toy</h5>
+    <h5 class="col-sm-4 col-xs-12">Output on MOBILENET-teddy bear</h5>
+    <div class="col-xs-12" id="div2">
+      <b><h4>result- Mobilenet is accurate</h4></b>
+    </div>
+   </div>
+    <br>
+    <br>
+    <div class="col-xs-12 " id="div1">
+      <li class="col-sm-4 col-xs-12">
+        <b>TEST-IMAGE</b>
+        <img src="shoe.webp" class="img-responsive img1">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">Output on Google lens- Shoe</h5>
+      <h5 class="col-sm-4 col-xs-12">Output on MOBILENET-running shoe</h5>
+      <div class="col-xs-12" id="div2">
+        <b><h4>result- both are accurate</h4></b>
+      </div>
+     </div>
+     <br>
+     <br>
+     <div class="col-xs-12 " id="div1">
+       <li class="col-sm-4 col-xs-12">
+         <b>TEST-IMAGE</b>
+         <img src="mouse.webp" class="img-responsive img1">
+       </li>
+       <h5 class="col-sm-4 col-xs-12">Output on Google lens- mouse</h5>
+       <h5 class="col-sm-4 col-xs-12">Output on MOBILENET-hairdryer</h5>
+       <div class="col-xs-12" id="div2">
+         <b><h4>result- google lens is accurate</h4></b>
+       </div>
+      </div>
+      <br>
+    <br>
+    <div class="col-xs-12 " id="div1">
+      <li class="col-sm-4 col-xs-12">
+        <b>TEST-IMAGE</b>
+        <img src="plug.jpg" class="img-responsive img1">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">Output on Google lens- plug</h5>
+      <h5 class="col-sm-4 col-xs-12">Output on MOBILENET-oxygen mask</h5>
+      <div class="col-xs-12" id="div2">
+        <b><h4>result- google lens is accurate</h4></b>
+      </div>
+     </div>
+     <br>
+    <br>
+    <div class="col-xs-12 " id="div1">
+      <li class="col-sm-4 col-xs-12">
+        <b>TEST-IMAGE</b>
+        <img src="water bottle.avif" class="img-responsive img1">
+      </li>
+      <h5 class="col-sm-4 col-xs-12">Output on Google lens- water bottle</h5>
+      <h5 class="col-sm-4 col-xs-12">Output on MOBILENET-soda  bottle</h5>
+      <div class="col-xs-12" id="div2">
+        <b><h4>result- google lens is accurate.</h4></b>
+      </div>
+     </div>
+
+<br>
+<br>
+<br>
+
+<h5 class="col-xs-12" id="results">I have tested 5 images <br> and I find google lens results to be more accurate compared to the Mobilenet results.</h5>
+
+
+  </ol>
+</div>
+
+<div class="copyrightfooter">Developed by Niranjana</div>
+    
+
+    
+    
+ </body> 
+
+</html>
